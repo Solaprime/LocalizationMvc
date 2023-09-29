@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @* Noe these message is coming from the resource den we use localizer inject in the View to convert it  *@
+    <h1 class="display-4">Welcome, @Localizer["Title"]</h1>
+    <h1 class="display-4">Welcome, @Localizer["SecondMessage"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a></p>
+    @* Noe these message is coming from the cntoller  den we use  pass it into the contoller then to the View *@
+    <h1>@ViewData["SpecailMessage"]</h1>
+    <h3>For Controller not working properlhy </h3>
+
+</div>
